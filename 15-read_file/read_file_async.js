@@ -7,6 +7,8 @@ fs.readFile('./index.html', {encoding: 'utf8'}, (err, data) => {
   console.log('Completed file reading, execute call back function');
   if (err) {
     console.log('There is a error: ', err);
+    // 直接跳出callback fuction
+    // 如果不写return，下面的console.log还会被继续执行
     return;
   }
 
